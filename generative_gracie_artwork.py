@@ -2,7 +2,7 @@
 import os #provides interaction with operating system
 import random 
 import uuid #generates unique IDs 
-from PIL import Image, ImageDraw, ImageFont #Python Imaging Library with classes for image and font prcoessing
+from PIL import Image, ImageDraw, ImageFont #Python Imaging Library with classes for image and font processing
 
 #generates a unique ID for each run
 run_id = uuid.uuid1()
@@ -65,7 +65,7 @@ for _ in range(number_of_shapes):
 #position and size are randomized within a certain range 
 def draw_star(draw, min_size, max_size):
     star_size = random.randint(min_size, max_size)
-    star_image = Image.open('/path/to/Gracie_star_white.png') 
+    star_image = Image.open('/path/to/Gracie_star_white.png') #replace with your own path
     #ANTIALIAS smoothes edges of image when being resized
     star_image = star_image.resize((star_size, star_size), Image.ANTIALIAS) 
     x = random.randint(0, width)
@@ -82,7 +82,7 @@ draw_star(draw_image, min_star_size, max_star_size)
 #defines text color (RGB code), text size and font 
 quote_color = (255, 255, 255)
 font_size = 65
-font_path = "/path/to/HannaHandwriting.ttf"
+font_path = "/path/to/HannaHandwriting.ttf"  #replace with your own path
 font = ImageFont.truetype(font_path, font_size)
 
 #positions text randomly within a specified range (to prevent text from being cut off) 
